@@ -1,0 +1,1 @@
+/usr/bin/cc -g   CMakeFiles/Challenge1.dir/main.c.o  -o Challenge1 

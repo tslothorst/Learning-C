@@ -1,0 +1,3 @@
+/mnt/d/development/Github/studie/Learning-C/Section3/Challenge1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/mnt/d/development/Github/studie/Learning-C/Section3/Challenge1/cmake-build-debug/CMakeFiles/Challenge1.dir
+/mnt/d/development/Github/studie/Learning-C/Section3/Challenge1/cmake-build-debug/CMakeFiles/edit_cache.dir
