@@ -13,7 +13,7 @@ int main() {
 
     int randomNumber = rand() % maxRandomNumber;
 
-    printf("%d \n", randomNumber);
+    //printf("%d \n", randomNumber);
 
     do {
         printf("Guess the random number between 1 and %d I'm thinking off.\n", maxRandomNumber-1);
