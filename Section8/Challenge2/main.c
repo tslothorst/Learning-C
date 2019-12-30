@@ -30,9 +30,9 @@ int main() {
     printf("The yearly avg: %.2f cm \n", (yearavg/12));
 
     for (int i = 0; i < 5; ++i) {
-        printf("jan feb mar apr may jun jul aug sept oct nov dec\n");
+        printf("jan\tfeb\tmar\tapr\tmay\tjun\tjul\taug\tsept\toct\tnov\tdec\n");
         for (int j = 0; j < 12; ++j) {
-            printf("%.2f ", rainfall[i][j]);
+            printf("%.2f\t", rainfall[i][j]);
         }
         printf("\n");
     }
