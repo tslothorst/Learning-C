@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdbool.h>
 #include <conio.h>
+#include <stdlib.h>
 
 void drawBoard(char a[]);
 void drawDevide();
@@ -42,6 +43,7 @@ int main() {
 
 void drawBoard (char a[])
 {
+    system("cls");
     printf("Play Tic Tac Toe\n \n");
     printf("  %c  |  %c  |  %c \n", a[1], a[2], a[3]);
     drawDevide();
@@ -87,35 +89,42 @@ bool checkForWin(char a[])
 
 void makeMove(char a[], int userInput, char mark, int player){
     if (userInput == 1 && a[1] == '1'){
-        a[1] = mark;}
+        a[1] = mark;
+    }
 
     if (userInput == 2 && a[2] == '2'){
-        a[2] = mark;}
+        a[2] = mark;
+    }
 
     if (userInput == 3 && a[3] == '3'){
-        a[3] = mark;}
+        a[3] = mark;
+    }
 
     if (userInput == 4 && a[4] == '4'){
-        a[4] = mark;}
+        a[4] = mark;
+    }
 
     if (userInput == 5 && a[5] == '5'){
-        a[5] = mark;}
+        a[5] = mark;
+    }
 
     if (userInput == 6 && a[6] == '6'){
-        a[6] = mark;}
+        a[6] = mark;
+    }
 
     if (userInput == 7 && a[7] == '7'){
-        a[7] = mark;}
+        a[7] = mark;
+    }
 
     if (userInput == 8 && a[8] == '8'){
-        a[8] = mark;}
+        a[8] = mark;
+    }
 
     if (userInput == 9 && a[9] == '9'){
-        a[9] = mark;}
-    else
-    {
-        printf("Invalid move ");
-
+        a[9] = mark;
+    }
+    else {
+        printf("Illegal move");
         player--;
         getch();
     }
