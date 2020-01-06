@@ -14,7 +14,7 @@ int main() {
     concatenate(string4,string2,string3);
 
     printf("The length of hello is: %d\n",length(string2)); // Should be 5.
-    printf("The length of hello is: %d\n",length(string3)); // Should be 6.
+    printf("The length of world! is: %d\n",length(string3)); // Should be 6.
     printf("The string is the same: %d\n", compare(string2,string2)); // Should print 1 for true
     printf("The string is the same: %d\n", compare(string2,string3)); // Should print 0 for false
     printf("The string is the same: %d\n", compare(string2,string1)); // Should print 0 for false
