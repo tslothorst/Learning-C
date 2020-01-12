@@ -5,11 +5,15 @@
 int main() {
     char* input = (char*)calloc(80, sizeof(char));
     char* output = NULL;
-    printf("Enter something: ");
-    gets(input);
-    output = (char*)realloc(input,strlen(input)+1);
-    printf("You entered: %s",output);
+    if(input != NULL){
+        printf("Enter something: ");
+        gets(input);
+        output = (char*)realloc(input,strlen(input)+1);
+        printf("You entered: %s",output);
+    }
     free(input);
     free(output);
+    input = NULL;
+    output = NULL;
     return 0;
 }
