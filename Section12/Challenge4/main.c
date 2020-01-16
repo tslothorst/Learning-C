@@ -8,7 +8,11 @@ int main() {
         printf("Enter something: ");
         gets(input);
         input = (char*)realloc(input,strlen(input)+1);
-        printf("You entered: %s",input);
+        printf("\nYou entered: %s",input);
+    }
+    if(input == NULL){
+        printf("\nFailed to allocate memory. Aborting...\n");
+        abort();
     }
     free(input);
     input = NULL;
