@@ -15,3 +15,10 @@ int main() {
 
     return 0;
 }
+
+void printItem(struct item* obj){
+    printf("Item name: %s\n",*obj->itemName);
+    printf("Quantity: %d\n",obj->quantity);
+    printf("Price: %.2f\n",obj->price);
+    printf("Amount: %.2f",obj->amount);
+}
