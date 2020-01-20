@@ -16,6 +16,10 @@ int main() {
     struct item* hardware = (struct item*)calloc(1, sizeof(struct item));
     readItem(hardware);
     printItem(hardware);
+    free(hardware->itemName);
+    hardware->itemName = NULL;
+    free(hardware);
+    hardware = NULL;
     return 0;
 }
 
