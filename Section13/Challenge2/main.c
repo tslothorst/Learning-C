@@ -14,12 +14,18 @@ void printItem(struct item* obj);
 
 int main() {
     struct item* hardware = (struct item*)calloc(1, sizeof(struct item));
-    readItem(hardware);
-    printItem(hardware);
-    free(hardware->itemName);
-    hardware->itemName = NULL;
-    free(hardware);
-    hardware = NULL;
+    if(hardware == NULL){
+        printf("\nFailed to allocate memory. Aborting...\n");
+        abort();
+    }
+    if(hardware != NULL) {
+        readItem(hardware);
+        printItem(hardware);
+        free(hardware->itemName);
+        hardware->itemName = NULL;
+        free(hardware);
+        hardware = NULL;
+    }
     return 0;
 }
 
@@ -33,7 +39,13 @@ void readItem(struct item* obj){
     scanf("%f", &obj->price);
 
     obj->itemName = (char*)calloc(strlen(itembuff)+1, sizeof(char));
-    strcpy(obj->itemName, itembuff);
+    if(obj->itemName != NULL){
+        strcpy(obj->itemName, itembuff);
+    }
+    if(obj->itemName == NULL){
+        printf("\nFailed to allocate memory. Aborting...\n");
+        abort();
+    }
     obj->amount = (float)obj->quantity * obj->price;
 };
 
