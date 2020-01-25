@@ -14,8 +14,8 @@ int main() {
         }
         fclose(infile);
         fclose(outfile);
-        remove(infile);
-        rename(outfile,infile);
+        remove("..\\romeoandjuliet.txt");
+        rename("..\\romeoandjuliet_to_upper.txt","..\\romeoandjuliet.txt");
     }
 
     return 0;
