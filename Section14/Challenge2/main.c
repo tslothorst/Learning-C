@@ -12,6 +12,11 @@ int main() {
         while(!feof(infile)){
             fputc(toupper(fgetc(infile)),outfile);
         }
+        fclose(infile);
+        fclose(outfile);
+        rename(infile,outfile);
+        remove(infile);
     }
+
     return 0;
 }
