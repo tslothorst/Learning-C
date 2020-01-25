@@ -14,8 +14,8 @@ int main() {
         }
         fclose(infile);
         fclose(outfile);
-        rename(infile,outfile);
         remove(infile);
+        rename(outfile,infile);
     }
 
     return 0;
