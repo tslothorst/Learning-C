@@ -11,10 +11,10 @@ int main() {
         fseek(infile, 0, SEEK_END);
         int len;
         len = ftell(infile);
-        for (int i = len; i >= 0; --i) {
+        for (int i = 0; i < len; ++i) {
             char c = fgetc(infile);
             fputc(c,outfile);
-            fseek(infile,-i,SEEK_END);
+            fseek(infile,(i*-1),SEEK_END);
         }
         fclose(infile);
         fclose(outfile);
